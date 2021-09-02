@@ -4,6 +4,7 @@ const config = require("./config.json");
 require("dotenv").config();
 
 const command = require("./command");
+const firstMessage = require('./first-message')
 
 client.on("ready", () => {
   console.log(`${client.user.tag} is ready to be used!`);
@@ -38,6 +39,8 @@ client.on("ready", () => {
       },
     });
   });
+
+  firstMessage(client, "882880394800824382", "hello world", ['🔥'])
 });
 
 client.login(process.env.TOKEN);
