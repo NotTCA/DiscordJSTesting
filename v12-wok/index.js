@@ -1,10 +1,12 @@
-const Discord = require("discord.js");
+const Discord = require('discord.js');
 const client = new Discord.Client();
 
-const config = require("./config.json");
-require("dotenv").config();
+const config = require('./config.json');
+require('dotenv').config();
 
-client.on("ready", () => {
+const command = require('./command');
+
+client.on('ready', () => {
   console.log(`The bot is ready!`);
 });
 
