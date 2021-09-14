@@ -7,7 +7,7 @@ export default {
     slash: 'both',
     testOnly: true,
 
-    callback: () => {
-        return 'Pong'
+    callback: ({ client }) => {
+        return `Pong! Client ping is ${client.ws.ping}ms.`
     }
 } as ICommand
